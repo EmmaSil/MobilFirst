@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Inicio</title>
+<body>
+    <header>
+        <img class="logo" src="./img/logo.png" alt="logo">
+    </header>
+    <nav class="barra navbar navbar-dark align-content-lg-start">
+      <div class="contentMen navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <!--para desplegar-->
+         <ul class="menu navbar-nav collapse navbar-collapse flex-row flex-wrap flex-lg-column flex-lg-nowrap" id="navbarNavDropdown">
+              <li><a  class="nav-item" href="index.html">Inicio</a></li>
+              <li><a href="./secciones/alimentos.html">Alimentos</a></li>
+              <li><a href="./secciones/platillosDulces.html">PlatillosDulces</a></li>
+              <li><a href="./secciones/platillosSalados.html">PlatillosSalados</a></li>
+              <li><a href="./secciones/beneficios.html">Beneficios</a></li>
+              <li><a href="./secciones/encuesta.html">Encuesta</a></li>
+              <li><a href="#Pie">PieDePágina</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+        <div class="titulo">Alimentos vegetales ricos en proteínas.</div>
+        <div class="contentR">
+            <picture>
+                <source media="(max-width:712px)" srcset="img/alimentosProt1.2.jpg">
+                <source media="(max-width:992px)" srcset="img/alimentosProt1.1.jpg">
+                <img src="./img/alimentosProt1.jpg" alt="Alimentos ricos en proteínas.">
+            </picture>
+            <p>En este sitio puedes encontrar información de alimentos vegetales que son fuente de proteínas, fibra y vitaminas.
+                Sería bueno que los incorpores a tu dieta de manera sencilla a través de las recetas saladas o dulces
+                que te presentamos, no importa si comes o no productos de origen animal, las recetas son variadas, así que
+                elige las que más le convengan, ya sea a tus gustos, ya sea a tu bolsillo. 
+                <br> 
+                Te recomendamos contestar la encuesta al final para que posteriormente te presentemos más recetas fáciles 
+                de tu interés.
+            </p>
+        </div>
+    </main>
+    <footer id="Pie">
+        <div>Pie de Página</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
