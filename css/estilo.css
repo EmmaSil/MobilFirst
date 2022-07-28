@@ -88,6 +88,7 @@ main{
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-end;
+    align-content: flex-end;
     grid-area: footer;
 }
 
@@ -109,7 +110,6 @@ main{
     width: 100%;
     text-align:justify;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:1.5rem;
 }
 
 /*Menú Platillos*/
@@ -209,6 +209,7 @@ form div{
     }
     .contentR p{
         padding: 4%;
+        font-size:1.3rem;
     }
     /*Recetas*/
     .plat{
@@ -241,8 +242,12 @@ form div{
     .contentR p{
         margin: 2%
     }
+   
     .contentR{
         flex-direction:row ;
+    }
+    .contentR p{
+        font-size: 1.5rem;
     }
     /*Recetas*/
     .ingredients ul, .procedure ol{
