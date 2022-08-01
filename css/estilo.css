@@ -50,11 +50,7 @@ header{
     text-decoration: none;
     border-radius: 4px;
 }
-.menu li:hover{/**/
-    transform: scale(1.1);
-    font-weight: bold;
-    margin: 20px;
-}
+
 main{
     margin: 1% 2% 3% 1%;
     min-height:100%;
@@ -110,6 +106,7 @@ main{
     width: 100%;
     text-align:justify;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
 }
 
 /*Menú Platillos*/
@@ -211,6 +208,7 @@ form div{
         padding: 4%;
         font-size:1.3rem;
     }
+    
     /*Recetas*/
     .plat{
         grid-template-areas: 
@@ -276,8 +274,14 @@ form div{
     .menu{
         flex-wrap: column nowrap;
     }
+    .menu li:hover{/**/
+        transform: scale(1.1);
+        font-weight: bold;
+        margin: 20px;
+    }
     .contentR p{
         padding:0px;
+        margin-left: 4%;
     }
     /*Recetas*/
     .plat{
