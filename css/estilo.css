@@ -1,138 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Inconsolata:wght@300&family=Pacifico&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
 
-/*font-family: 'Frank Ruhl Libre', serif;
-font-family: 'Inconsolata', monospace;
-font-family: 'Pacifico', cursive;*/
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Inconsolata:wght@300&family=Pacifico&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #F3EFCC;
-    display: grid;
-    width: 100%;
-    min-height: 100vh;
-}
-header{
-    background-color: #32502E;
-    padding: 1%;
-    grid-area: header;
-}
-.logo{
-    margin: 0 1% 0 2%;
- }
-.barra{ /*contenedor del menú*/
-    background-color:#32502E;
-    grid-area: menu;
-    border-right: 1px solid #629866;
-    justify-content: center;
- }
- .menu{
+body {
+  background-color: #F3EFCC;
+  display: grid;
+  width: 100%;
+  min-height: 100vh; }
+
+header {
+  background-color: #32502E;
+  padding: 1%;
+  grid-area: header; }
+  header .logo {
+    margin: 0 1% 0 2%; }
+
+.barra {
+  background-color: #32502E;
+  grid-area: menu;
+  border-right: 1px solid #629866;
+  justify-content: center; }
+  .barra .menu {
     display: flex;
     justify-content: space-evenly;
     align-content: flex-start;
     align-items: center;
     gap: 7px;
-    margin: 2%;
- }
-.menu li{
-    margin: 2%;
-    display: inline-block;
-    transition: all 2s;/**/
-}
-.menu  li a{
-    margin: 1%;
-    background-color: #406343;
-    font-size: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: azure;
-    text-decoration: none;
-    border-radius: 4px;
-}
+    margin: 2%; }
+    .barra .menu li {
+      margin: 2%;
+      display: inline-block;
+      transition: all 2s; }
+      .barra .menu li a {
+        margin: 1%;
+        background-color: #406343;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1rem;
+        color: azure;
+        text-align: none;
+        text-decoration: none;
+        border-radius: 4px; }
 
-main{
-    margin: 1% 2% 3% 1%;
-    min-height:100%;
-    grid-area: main;
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.contentR{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1%;
-}
-.contentR img, .recep img{
-    margin: 2%;
-    border: 6px solid #406343;
-}
-#Pie{
-    height: 130px;
-    background-color: #32502E;
-    padding: 1%;
+main {
+  margin: 1% 2% 3% 1%;
+  min-height: 100%;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: none;
+  align-items: center; }
+  main p, main .contentR p, .contentR main p {
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 1.5rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    background-image: url(../img/star.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: flex-end;
-    align-content: flex-end;
-    grid-area: footer;
-}
+    color: black;
+    text-align: justify; }
+
+.contentR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1%; }
+  .contentR img {
+    margin: 2%;
+    border: 6px solid #406343; }
 
 /*Contenido del inicio*/
-.wrapR{
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5%;
-}
-.titulo{
-    color:black;
-    font-family:'Pacifico',cursive;
-    font-size:2.5rem;
-    margin: 2%;
-    padding: 1%;
-    text-align: center;
-} 
-.contentR p, main p{
-    width: 100%;
-    text-align:justify;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5rem;
-}
+.wrapR {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%; }
 
-/*Menú Platillos*/
-.recetas{
-    background-color:#ECE7B4 ;
-    margin: 3%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2%;
-}
-.recetas ul a{
-    font-family:'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-.recetas ul{
-    list-style-type: square;
-    text-decoration: none;
-}
-.recetas li:hover{/**/
-    transform: scale(1.1);
-}
+.titulo {
+  margin: 2%;
+  padding: 1%;
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  color: black;
+  text-align: center; }
 
+.recetas {
+  background-color: #ECE7B4;
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%; }
+  .recetas ul {
+    list-style-type: square; }
+    .recetas ul li:hover {
+      transform: scale(1.1); }
+    .recetas ul li a {
+      font-weight: bold;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.5rem;
+      color: black;
+      text-align: none;
+      text-decoration: none; }
+
+#Pie {
+  height: 130px;
+  background-color: #32502E;
+  padding: 1%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  color: white;
+  text-align: none;
+  background-image: url(../img/star.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: center;
+  grid-area: footer; }
+/***/
 /*Formulario*/
 form div{
     margin: 5px 0 20px 0;
@@ -299,58 +285,45 @@ p, .titulo, .recetas ul, .plat{
     position: static;
     animation: scale-in-bottom 1.5s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) backwards;
     }
+/***/
 @keyframes scale-in-bottom {
-    0% {
-        transform: scale(0);
-        transform-origin: 50% 100%;
-        opacity: 1;
-        z-index: 1;
-    }
-    100% {
-        transform: scale(1);
-        transform-origin: 50% 100%;
-        opacity: 1;
-        z-index: 1;
-    }
-}
-.logo{
-animation:jello-horizontal 1.5s 1s 2 reverse none;
-}
-@keyframes jello-horizontal {
-    0% {
-        transform: scale3d(1, 1, 1);
-    }
-    30% {
-        transform: scale3d(1.25, 0.75, 1);
-        
-    }
-    40% {
-        transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-        transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-        transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-        transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-        transform: scale3d(1, 1, 1);
-    }
-}
-img{
-    animation: fade-in-bck 1.5s 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-@keyframes fade-in-bck {
-    0% {
-        transform: translateZ(80px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateZ(30px);
-        opacity: 1;
-    }
-}
+  0% {
+    transform: scale(0);
+    transform-origin: 50% 100%;
+    opacity: 1;
+    z-index: 1; }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
+    opacity: 1;
+    z-index: 1; } }
 
+.logo {
+  animation: jello-horizontal 1.5s 1s 2 reverse none; }
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1); }
+  30% {
+    transform: scale3d(1.25, 0.75, 1); }
+  40% {
+    transform: scale3d(0.75, 1.25, 1); }
+  50% {
+    transform: scale3d(1.15, 0.85, 1); }
+  65% {
+    transform: scale3d(0.95, 1.05, 1); }
+  75% {
+    transform: scale3d(1.05, 0.95, 1); }
+  100% {
+    transform: scale3d(1, 1, 1); } }
+
+img {
+  animation: fade-in-bck 1.5s 2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+@keyframes fade-in-bck {
+  0% {
+    transform: translateZ(80px);
+    opacity: 0; }
+  100% {
+    transform: translateZ(30px);
+    opacity: 1; } }
