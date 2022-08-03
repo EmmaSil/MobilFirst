@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Inconsolata:wght@300&family=Pacifico&display=swap');
+*{
+    @include padMarg(0%,0%);
+    box-sizing: border-box;
+}

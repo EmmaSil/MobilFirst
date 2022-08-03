@@ -1,0 +1,23 @@
+$verd1:#406343;
+$verd2:#32502E;
+$crema:#ECE7B4;
+
+$fontMono:'Courier New', Courier, monospace;
+$fontCambria:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$fontPacific:'Pacifico',cursive;
+
+@mixin padMarg($margin, $padding) {
+    margin:$margin;
+    padding: $padding;
+}
+@mixin letra($fontF,$fontS,$col,$AligText) {
+    font-family: $fontF;
+    font-size: $fontS;
+    color: $col;
+    text-align:$AligText;
+}
+@mixin alinear($justiC,$aligC,$aligI) {
+    justify-content: $justiC;
+    align-content: $aligC;
+    align-items: $aligI;
+}

@@ -1,0 +1,37 @@
+
+main{
+    margin: 1% 2% 3% 1%;
+    min-height:100%;
+    grid-area: main;
+    display:flex;
+    flex-direction: column;
+    @include alinear(flex-start,none,center);
+    p{
+        width: 100%;
+        @include letra($fontCambria,1.5rem,black,justify);
+    }
+}
+.contentR{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1%;
+    img{
+        margin: 2%;
+        border: 6px solid $verd1;
+    }
+    p{
+       @extend p;
+    }
+}
+
+/*Contenido del inicio*/
+.wrapR{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+.titulo{
+    @include padMarg(2%,1%);
+    @include letra($fontPacific,2.5rem,black,center);
+} 

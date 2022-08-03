@@ -1,0 +1,14 @@
+body{
+    background-color: #F3EFCC;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    background-color: #32502E;
+    padding: 1%;
+    grid-area: header;
+    .logo{
+        margin: 0 1% 0 2%;
+     }
+}
