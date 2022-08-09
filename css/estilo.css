@@ -12,17 +12,26 @@ body {
   @media (min-width: 0px) {
     body {
       grid-template-columns: auto;
-      grid-template-areas: "header" "menu" "main" "footer";
+      grid-template-areas: "header"
+ "menu"
+ "main"
+ "footer";
       gap: 1px; } }
   @media (min-width: 768px) {
     body {
       grid-template-columns: 2fr 3fr;
-      grid-template-areas: "header menu " "main main" "main main" "footer footer";
+      grid-template-areas: "header menu "
+ "main main"
+ "main main"
+ "footer footer";
       gap: 0; } }
   @media (min-width: 992px) {
     body {
       grid-template-columns: auto 3fr 3fr;
-      grid-template-areas: "header header header" "menu main main" "menu main main" "footer footer  footer";
+      grid-template-areas: "header header header"
+ "menu main main"
+ "menu main main"
+ "footer footer  footer";
       gap: 1px; } }
 
 header {
@@ -114,7 +123,7 @@ main {
   justify-content: flex-start;
   align-content: none;
   align-items: center; }
-  main p, main .contentR p, .contentR main p {
+  main p, .contentR  p {
     /**/
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -272,11 +281,16 @@ img {
   background-color: #ECE7B4; }
   @media (min-width: 0px) {
     .plat {
-      grid-template-areas: "nombrePlat" "vista " "ingredients " "procedure"; } }
+      grid-template-areas: "nombrePlat"
+ "vista "
+ "ingredients "
+ "procedure"; } }
   @media (min-width: 992px) {
     .plat {
       grid-template-columns: 1fr 4fr;
-      grid-template-areas: "nombrePlat ingredients" "vista  ingredients " "procedure procedure"; } }
+      grid-template-areas: "nombrePlat ingredients"
+ "vista  ingredients "
+ "procedure procedure"; } }
 
 .nombrePlat {
   grid-area: nombrePlat;
@@ -294,7 +308,7 @@ img {
   color: black;
   text-align: justify;
   grid-area: procedure; }
-  .procedure ol, .ingredients ol, .ingredients ul {
+  .procedure ol, .ingredients ul {
     /**/
     margin-left: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
