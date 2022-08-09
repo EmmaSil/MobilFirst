@@ -1,0 +1,58 @@
+/*Recetas*/
+.recep{
+    display:block;
+    li{
+        margin-top: 3%;
+    }
+}
+.plat{
+    display: grid;
+    @include padMarg(2%,2%);
+    align-items: center;
+    justify-items: center;
+    background-color: $crema;
+    @include mediaQ(sm){
+        grid-template-areas: 
+        "nombrePlat"
+        "vista "
+        "ingredients "
+        "procedure";
+    }
+    @include mediaQ(lg){
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+        "nombrePlat ingredients"
+        "vista  ingredients "
+        "procedure procedure";
+    }
+}
+.nombrePlat{
+    grid-area: nombrePlat;
+    @include letra($fontPacific,2rem,$verd1,center);
+    margin: 4%;
+}
+.procedure{
+    border: 6px solid #406343;
+    padding: 2%;
+    @include letra($fontMono,1.5rem,black,justify);
+    grid-area: procedure;
+    ol{/**/
+        margin-left: 2rem;
+        font-family:$fontCambria;
+        @include mediaQ(md){
+            column-count: 2;
+            column-gap: 8%;
+        }
+    }
+}
+.ingredients{
+    @extend .procedure;
+    grid-area:ingredients;
+    margin: 2%;
+    ul{
+        @extend ol;
+    }
+}
+.vista{
+    grid-area: vista;
+}

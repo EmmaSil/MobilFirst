@@ -1,18 +1,4 @@
 
-@keyframes scale-in-bottom {
-    0% {
-        transform: scale(0);
-        transform-origin: 50% 100%;
-        opacity: 1;
-        z-index: 1;
-    }
-    100% {
-        transform: scale(1);
-        transform-origin: 50% 100%;
-        opacity: 1;
-        z-index: 1;
-    }
-}
 .logo{
 animation:jello-horizontal 1.5s 1s 2 reverse none;
 }
@@ -41,7 +27,7 @@ animation:jello-horizontal 1.5s 1s 2 reverse none;
     }
 }
 img{
-    animation: fade-in-bck 1.5s 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-bck 1.5s 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 @keyframes fade-in-bck {
     0% {

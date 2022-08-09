@@ -1,8 +1,11 @@
 @import "../scss/utilities/variables";
+@import "../scss/utilities/medQs";
 @import "../scss/layout/reset";
 @import "../scss/layout/body";
 @import "../scss/layout/menu";
 @import "../scss/layout/main";
+@import "../scss/contenido/alimentos.scss";
 @import "../scss/contenido/platillos";
 @import "../scss/layout/piePag";
 @import "../scss/layout/animaciones";
+@import "../scss/contenido/recetas";

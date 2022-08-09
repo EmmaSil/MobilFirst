@@ -1,12 +1,12 @@
 
 main{
+    grid-area: main;
     margin: 1% 2% 3% 1%;
     min-height:100%;
-    grid-area: main;
     display:flex;
     flex-direction: column;
     @include alinear(flex-start,none,center);
-    p{
+    p{/**/
         width: 100%;
         @include letra($fontCambria,1.5rem,black,justify);
     }
@@ -16,12 +16,26 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 1%;
+    @include mediaQ(md){
+        flex-direction:row ;
+    }
     img{
         margin: 2%;
         border: 6px solid $verd1;
     }
     p{
        @extend p;
+       @include mediaQ(sm){
+        padding: 4%;
+        font-size:1.3rem;
+       }
+       @include mediaQ(md){
+        font-size: 1.5rem;
+       }
+       @include mediaQ(lg){
+        padding:0px;
+        margin-left: 4%;
+       } 
     }
 }
 

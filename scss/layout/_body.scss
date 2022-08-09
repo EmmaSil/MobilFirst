@@ -3,12 +3,50 @@ body{
     display: grid;
     width: 100%;
     min-height: 100vh;
+    @include mediaQ(sm){
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header"
+        "menu"
+        "main"
+        "footer";
+        gap: 1px;
+    }
+    @include mediaQ(md){
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas:
+        "header menu "
+        "main main"
+        "main main"
+        "footer footer";
+        gap: 0;
+    }
+    @include mediaQ(lg){
+        grid-template-columns: auto 3fr 3fr;
+        grid-template-areas:
+        "header header header"
+        "menu main main"
+        "menu main main"
+        "footer footer  footer" ;
+        gap:1px;
+    }
 }
 header{
-    background-color: #32502E;
-    padding: 1%;
     grid-area: header;
-    .logo{
-        margin: 0 1% 0 2%;
-     }
+    background-color: $verd2;
+    padding: 1%;
+    height: auto;
+    @include mediaQ(sm){
+        position:sticky;
+        z-index: 2;
+    }
+    @include mediaQ(md){
+        top:0%;
+    }
+    @include mediaQ(lg){
+        position: initial;
+    }
 }
+.logo{
+    margin: 0 1% 0 2%;
+ }

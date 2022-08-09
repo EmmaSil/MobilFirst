@@ -1,0 +1,24 @@
+.caract{
+    align-items:baseline;
+    @include padMarg(4%, 2%);
+    width: 100%;
+    section{
+        border:4px solid $verd2;
+        margin: 2%;
+    }
+}
+.contButt{
+    display: flex;
+    flex-wrap: wrap;
+    @include alinear(center, none, center);
+}
+.btn{
+    background-color: $verd2;
+    @include letra($fontMono,1.2rem,azure,center);
+    
+    margin: 1%;
+}
+.infoAlim{
+    background-color: $crema;
+    @include letra($fontCambria,1.3rem,black,justify);
+}

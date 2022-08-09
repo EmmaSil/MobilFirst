@@ -9,50 +9,113 @@ body {
   display: grid;
   width: 100%;
   min-height: 100vh; }
+  @media (min-width: 0px) {
+    body {
+      grid-template-columns: auto;
+      grid-template-areas: "header" "menu" "main" "footer";
+      gap: 1px; } }
+  @media (min-width: 768px) {
+    body {
+      grid-template-columns: 2fr 3fr;
+      grid-template-areas: "header menu " "main main" "main main" "footer footer";
+      gap: 0; } }
+  @media (min-width: 992px) {
+    body {
+      grid-template-columns: auto 3fr 3fr;
+      grid-template-areas: "header header header" "menu main main" "menu main main" "footer footer  footer";
+      gap: 1px; } }
 
 header {
+  grid-area: header;
   background-color: #32502E;
   padding: 1%;
-  grid-area: header; }
-  header .logo {
-    margin: 0 1% 0 2%; }
+  height: auto; }
+  @media (min-width: 0px) {
+    header {
+      position: sticky;
+      z-index: 2; } }
+  @media (min-width: 768px) {
+    header {
+      top: 0%; } }
+  @media (min-width: 992px) {
+    header {
+      position: initial; } }
+
+.logo {
+  margin: 0 1% 0 2%; }
 
 .barra {
-  background-color: #32502E;
   grid-area: menu;
+  background-color: #32502E;
   border-right: 1px solid #629866;
   justify-content: center; }
-  .barra .menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: flex-start;
-    align-items: center;
-    gap: 7px;
-    margin: 2%; }
-    .barra .menu li {
-      margin: 2%;
-      display: inline-block;
-      transition: all 2s; }
-      .barra .menu li a {
-        margin: 1%;
-        background-color: #406343;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 1rem;
-        color: azure;
-        text-align: none;
-        text-decoration: none;
-        border-radius: 4px; }
+  @media (min-width: 0px) {
+    .barra {
+      top: 0;
+      height: auto;
+      position: sticky;
+      z-index: 2; } }
+  @media (min-width: 768px) {
+    .barra {
+      height: 100%;
+      flex-flow: row wrap; } }
+  @media (min-width: 992px) {
+    .barra {
+      position: initial; } }
+  .barra ul {
+    height: 100%;
+    flex-flow: row wrap; }
+
+@media (min-width: 992px) {
+  .contentMen {
+    height: 500px;
+    top: 0;
+    position: sticky; } }
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  align-items: center;
+  gap: 7px;
+  margin: 2%; }
+  .menu li {
+    margin: 2%;
+    display: inline-block;
+    transition: all 2s; }
+    .menu li a {
+      margin: 1%;
+      background-color: #406343;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1rem;
+      color: azure;
+      text-align: none;
+      text-decoration: none;
+      border-radius: 4px; }
+      .menu li a:link {
+        color: #fcd7dd; }
+      .menu li a:visited {
+        color: azure; }
+    @media (min-width: 992px) {
+      .menu li:hover {
+        transform: scale(1.1);
+        font-weight: bold;
+        margin: 20px; } }
+  @media (min-width: 992px) {
+    .menu {
+      flex-wrap: column nowrap; } }
 
 main {
+  grid-area: main;
   margin: 1% 2% 3% 1%;
   min-height: 100%;
-  grid-area: main;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: none;
   align-items: center; }
   main p, main .contentR p, .contentR main p {
+    /**/
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 1.5rem;
@@ -64,9 +127,23 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 1%; }
+  @media (min-width: 768px) {
+    .contentR {
+      flex-direction: row; } }
   .contentR img {
     margin: 2%;
     border: 6px solid #406343; }
+  @media (min-width: 0px) {
+    .contentR p {
+      padding: 4%;
+      font-size: 1.3rem; } }
+  @media (min-width: 768px) {
+    .contentR p {
+      font-size: 1.5rem; } }
+  @media (min-width: 992px) {
+    .contentR p {
+      padding: 0px;
+      margin-left: 4%; } }
 
 /*Contenido del inicio*/
 .wrapR {
@@ -81,6 +158,37 @@ main {
   font-size: 2.5rem;
   color: black;
   text-align: center; }
+
+.caract {
+  align-items: baseline;
+  margin: 4%;
+  padding: 2%;
+  width: 100%; }
+  .caract section {
+    border: 4px solid #32502E;
+    margin: 2%; }
+
+.contButt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: none;
+  align-items: center; }
+
+.btn {
+  background-color: #32502E;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  color: azure;
+  text-align: center;
+  margin: 1%; }
+
+.infoAlim {
+  background-color: #ECE7B4;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3rem;
+  color: black;
+  text-align: justify; }
 
 .recetas {
   background-color: #ECE7B4;
@@ -118,185 +226,6 @@ main {
   align-content: flex-end;
   align-items: center;
   grid-area: footer; }
-/***/
-/*Formulario*/
-form div{
-    margin: 5px 0 20px 0;
-    font-size: medium;
-}
-
-/*Recetas*/
-.recep{
-    display:block;
-}
-.recep li{
-    margin-top: 3%;
-   }
-.plat{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    background-color: #ECE7B4;
-    margin: 2%;
-    padding: 2%;
-}
-.ingredients{
-    grid-area:ingredients;
-    margin: 2%;
-}
-.procedure{
-    grid-area: procedure;
-}
-.vista{
-    grid-area: vista;
-}
-.ingredients , .procedure{
-    border: 6px solid #406343;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    text-align: justify;
-    padding: 2%;
-}
-.ingredients ul, .procedure ol{
-    margin-left: 2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.nombrePlat{
-    grid-area: nombrePlat;
-    font-family:'Pacifico',cursive;
-    font-size: 2rem;
-    text-align: center;
-    background-color: #406343;
-    margin: 4%;
-}
-@media (min-width:0px) {
-    body{
-        grid-template-columns: auto;
-        grid-template-areas:
-        "header"
-        "menu"
-        "main"
-        "footer";
-        gap: 1px;
-    }
-    header{
-        position: initial;
-    }
-    .barra{
-        top: 0;
-    }
-    header, .barra{
-        height:auto;
-        position:sticky;
-        z-index: 2;
-    }
-    .contentR p{
-        padding: 4%;
-        font-size:1.3rem;
-    }
-    
-    /*Recetas*/
-    .plat{
-        grid-template-areas: 
-        "nombrePlat"
-        "vista "
-        "ingredients "
-        "procedure";
-    }
-}
-
-@media (min-width:768px) {
-    body{
-        grid-template-columns: 2fr 3fr;
-        grid-template-areas:
-        "header menu "
-        "main main"
-        "main main"
-        "footer footer";
-        gap: 0;
-    }
-    .barra  ul{
-        height: 100%;
-        flex-flow: row wrap;
-    }
-    header{
-        top: 0;
-    }
-    /*Inicio*/
-    .contentR p{
-        margin: 2%
-    }
-   
-    .contentR{
-        flex-direction:row ;
-    }
-    .contentR p{
-        font-size: 1.5rem;
-    }
-    /*Recetas*/
-    .ingredients ul, .procedure ol{
-        column-count: 2;
-        column-gap: 8%;
-    }
-}
-@media(min-width:992px){
-    body{
-        grid-template-columns: auto 3fr 3fr;
-        grid-template-areas:
-        "header header header"
-        "menu main main"
-        "menu main main"
-        "footer footer  footer" ;
-        gap:1px;
-    }
-    header, .barra{
-        position: initial;
-    }
-    .contentMen{
-        height: 500px;
-        top:0;
-        position:sticky;
-    }
-    .menu{
-        flex-wrap: column nowrap;
-    }
-    .menu li:hover{/**/
-        transform: scale(1.1);
-        font-weight: bold;
-        margin: 20px;
-    }
-    .contentR p{
-        padding:0px;
-        margin-left: 4%;
-    }
-    /*Recetas*/
-    .plat{
-        grid-template-columns: 1fr 4fr;
-        grid-template-areas: 
-        "nombrePlat ingredients"
-        "vista  ingredients "
-        " procedure procedure";
-    }
-}
-
-/*Animaciones*/
-  
-p, .titulo, .recetas ul, .plat{
-    position: static;
-    animation: scale-in-bottom 1.5s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) backwards;
-    }
-/***/
-@keyframes scale-in-bottom {
-  0% {
-    transform: scale(0);
-    transform-origin: 50% 100%;
-    opacity: 1;
-    z-index: 1; }
-  100% {
-    transform: scale(1);
-    transform-origin: 50% 100%;
-    opacity: 1;
-    z-index: 1; } }
 
 .logo {
   animation: jello-horizontal 1.5s 1s 2 reverse none; }
@@ -318,7 +247,7 @@ p, .titulo, .recetas ul, .plat{
     transform: scale3d(1, 1, 1); } }
 
 img {
-  animation: fade-in-bck 1.5s 2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+  animation: fade-in-bck 1.5s 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
 @keyframes fade-in-bck {
   0% {
@@ -327,3 +256,56 @@ img {
   100% {
     transform: translateZ(30px);
     opacity: 1; } }
+
+/*Recetas*/
+.recep {
+  display: block; }
+  .recep li {
+    margin-top: 3%; }
+
+.plat {
+  display: grid;
+  margin: 2%;
+  padding: 2%;
+  align-items: center;
+  justify-items: center;
+  background-color: #ECE7B4; }
+  @media (min-width: 0px) {
+    .plat {
+      grid-template-areas: "nombrePlat" "vista " "ingredients " "procedure"; } }
+  @media (min-width: 992px) {
+    .plat {
+      grid-template-columns: 1fr 4fr;
+      grid-template-areas: "nombrePlat ingredients" "vista  ingredients " "procedure procedure"; } }
+
+.nombrePlat {
+  grid-area: nombrePlat;
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  color: #406343;
+  text-align: center;
+  margin: 4%; }
+
+.procedure, .ingredients {
+  border: 6px solid #406343;
+  padding: 2%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  color: black;
+  text-align: justify;
+  grid-area: procedure; }
+  .procedure ol, .ingredients ol, .ingredients ul {
+    /**/
+    margin-left: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+    @media (min-width: 768px) {
+      .procedure ol, .ingredients ol, .ingredients ul {
+        column-count: 2;
+        column-gap: 8%; } }
+
+.ingredients {
+  grid-area: ingredients;
+  margin: 2%; }
+
+.vista {
+  grid-area: vista; }
