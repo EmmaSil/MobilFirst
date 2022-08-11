@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <header>
-        <img class="logo" src="../img/logo.png" alt="logo">
-    </header>
+  <header>
+  <img class="logo" src="../img/logo.png" alt="logo">
+</header>
     <nav class="barra navbar  navbar-light align-content-lg-start">
         <div class="contentMen navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +33,57 @@
         </div>
     </nav>
     <main>
-        <picture>
-            <source media="(min-width:576px)" srcset="../img/beneficioLegumbres.jpg">
-            <source media="(min-width:768px )" srcset="../img/beneficioLegumbres.2.jpg">
-            <img src="../img/beneficioLegumbres.3.jpg" alt="Legumbres beneficios.">
-        </picture>
+        <section>
+            <div id="benefi" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#benefi" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#benefi" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#benefi" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#benefi" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#benefi" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#benefi" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../img/benefi.png"  class="img-fluid" alt="beneficios">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/benefiLentejas.jpg"  class="img-fluid" alt="beneficiosLentejas">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/benefiGarbanzos.jpg" class="img-fluid" alt="beneficiosGarbanzos">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/benefiAmaranto.jpg" class="img-fluid" alt="beneficiosAmaranto">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/benefiQuinoa.jpg" class="img-fluid" alt="beneficiosQuinoa">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/benefiCacahuate.jpg" class="img-fluid" alt="beneficiosCacahuate">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/benefiEspirulina.png" class="img-fluid"  alt="beneficiosEspirulina">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#benefi" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#benefi" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+    
     </main>
     <footer id="Pie">
-        <div>Pie de Página</div>
+      <img src="../img/siganos.png">
+      <div>
+        <a class="m-2" href="https://es-la.facebook.com/" type="button" target="_blank"><img src="../img/facebook.png"></a>
+        <a class="m-2" href="https://www.instagram.com/" type="button" target="_blank"><img src="../img/instagram.png"></a>
+      </div>
     </footer>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

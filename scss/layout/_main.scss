@@ -30,12 +30,10 @@ main{
         font-size:1.3rem;
        }
        @include mediaQ(md){
+        padding: 0%;
+        margin: 3%;
         font-size: 1.5rem;
        }
-       @include mediaQ(lg){
-        padding:0px;
-        margin-left: 4%;
-       } 
     }
 }
 

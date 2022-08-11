@@ -2,12 +2,14 @@
     height: 130px;
     background-color: $verd2;
     padding: 1%;
-    @include letra($fontMono,1.5rem,white,none);
     background-image: url(../img/star.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     @include alinear(flex-end,flex-end,center);
     grid-area: footer;
+    @include mediaQ(md){
+        background-position:center;
+       }
 }

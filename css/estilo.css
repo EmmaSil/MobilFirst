@@ -9,7 +9,7 @@ body {
   display: grid;
   width: 100%;
   min-height: 100vh; }
-  @media (min-width: 0px) {
+  @media (min-width: 320px) {
     body {
       grid-template-columns: auto;
       grid-template-areas: "header"
@@ -39,7 +39,7 @@ header {
   background-color: #32502E;
   padding: 1%;
   height: auto; }
-  @media (min-width: 0px) {
+  @media (min-width: 320px) {
     header {
       position: sticky;
       z-index: 2; } }
@@ -58,7 +58,7 @@ header {
   background-color: #32502E;
   border-right: 1px solid #629866;
   justify-content: center; }
-  @media (min-width: 0px) {
+  @media (min-width: 320px) {
     .barra {
       top: 0;
       height: auto;
@@ -142,17 +142,15 @@ main {
   .contentR img {
     margin: 2%;
     border: 6px solid #406343; }
-  @media (min-width: 0px) {
+  @media (min-width: 320px) {
     .contentR p {
       padding: 4%;
       font-size: 1.3rem; } }
   @media (min-width: 768px) {
     .contentR p {
+      padding: 0%;
+      margin: 3%;
       font-size: 1.5rem; } }
-  @media (min-width: 992px) {
-    .contentR p {
-      padding: 0px;
-      margin-left: 4%; } }
 
 /*Contenido del inicio*/
 .wrapR {
@@ -222,19 +220,18 @@ main {
   height: 130px;
   background-color: #32502E;
   padding: 1%;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1.5rem;
-  color: white;
-  text-align: none;
   background-image: url(../img/star.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: flex-end;
   align-content: flex-end;
   align-items: center;
   grid-area: footer; }
+  @media (min-width: 768px) {
+    #Pie {
+      background-position: center; } }
 
 .logo {
   animation: jello-horizontal 1.5s 1s 2 reverse none; }
@@ -271,6 +268,9 @@ img {
   display: block; }
   .recep li {
     margin-top: 3%; }
+  .recep header {
+    top: 0px;
+    position: sticky; }
 
 .plat {
   display: grid;
@@ -279,7 +279,7 @@ img {
   align-items: center;
   justify-items: center;
   background-color: #ECE7B4; }
-  @media (min-width: 0px) {
+  @media (min-width: 320px) {
     .plat {
       grid-template-areas: "nombrePlat"
  "vista "
@@ -313,7 +313,7 @@ img {
     margin-left: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
     @media (min-width: 768px) {
-      .procedure ol, .ingredients ol, .ingredients ul {
+      .procedure ol, .ingredients ul {
         column-count: 2;
         column-gap: 8%; } }
 

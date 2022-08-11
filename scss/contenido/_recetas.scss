@@ -4,7 +4,12 @@
     li{
         margin-top: 3%;
     }
+    header{
+        top: 0px;
+        position: sticky;
+    }
 }
+
 .plat{
     display: grid;
     @include padMarg(2%,2%);
@@ -26,6 +31,7 @@
         "procedure procedure";
     }
 }
+
 .nombrePlat{
     grid-area: nombrePlat;
     @include letra($fontPacific,2rem,$verd1,center);
