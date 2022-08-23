@@ -9,29 +9,20 @@ body {
   display: grid;
   width: 100%;
   min-height: 100vh; }
-  @media (min-width: 320px) {
+  @media (min-width: 0px) {
     body {
       grid-template-columns: auto;
-      grid-template-areas: "header"
- "menu"
- "main"
- "footer";
+      grid-template-areas: "header" "menu" "main" "footer";
       gap: 1px; } }
   @media (min-width: 768px) {
     body {
       grid-template-columns: 2fr 3fr;
-      grid-template-areas: "header menu "
- "main main"
- "main main"
- "footer footer";
+      grid-template-areas: "header menu " "main main" "main main" "footer footer";
       gap: 0; } }
   @media (min-width: 992px) {
     body {
       grid-template-columns: auto 3fr 3fr;
-      grid-template-areas: "header header header"
- "menu main main"
- "menu main main"
- "footer footer  footer";
+      grid-template-areas: "header header header" "menu main main" "menu main main" "footer footer  footer";
       gap: 1px; } }
 
 header {
@@ -39,7 +30,7 @@ header {
   background-color: #32502E;
   padding: 1%;
   height: auto; }
-  @media (min-width: 320px) {
+  @media (min-width: 0px) {
     header {
       position: sticky;
       z-index: 2; } }
@@ -51,14 +42,21 @@ header {
       position: initial; } }
 
 .logo {
-  margin: 0 1% 0 2%; }
+  margin: 1%; }
 
 .barra {
   grid-area: menu;
   background-color: #32502E;
-  border-right: 1px solid #629866;
-  justify-content: center; }
-  @media (min-width: 320px) {
+  align-items: normal;
+  align-content: center;
+  flex-flow: column nowrap;
+  /*ul{
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: stretch;
+    }*/ }
+  @media (min-width: 0px) {
     .barra {
       top: 0;
       height: auto;
@@ -70,30 +68,31 @@ header {
       flex-flow: row wrap; } }
   @media (min-width: 992px) {
     .barra {
-      position: initial; } }
-  .barra ul {
-    height: 100%;
-    flex-flow: row wrap; }
+      position: initial;
+      width: 215px; } }
 
 @media (min-width: 992px) {
   .contentMen {
     height: 500px;
+    width: auto;
     top: 0;
-    position: sticky; } }
+    position: sticky;
+    margin: 2%; } }
 
 .menu {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: center;
   align-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 7px;
-  margin: 2%; }
+  padding-left: 0.5%; }
   .menu li {
     margin: 2%;
     display: inline-block;
     transition: all 2s; }
     .menu li a {
-      margin: 1%;
+      padding: 8px;
       background-color: #406343;
       font-family: "Courier New", Courier, monospace;
       font-size: 1rem;
@@ -112,8 +111,11 @@ header {
         margin: 20px; } }
   @media (min-width: 992px) {
     .menu {
-      flex-wrap: column nowrap; } }
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-around; } }
 
+/*navbar-nav*/
 main {
   grid-area: main;
   margin: 1% 2% 3% 1%;
@@ -123,7 +125,7 @@ main {
   justify-content: flex-start;
   align-content: none;
   align-items: center; }
-  main p, .contentR  p {
+  main p, main .contentR p, .contentR main p {
     /**/
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -142,7 +144,7 @@ main {
   .contentR img {
     margin: 2%;
     border: 6px solid #406343; }
-  @media (min-width: 320px) {
+  @media (min-width: 0px) {
     .contentR p {
       padding: 4%;
       font-size: 1.3rem; } }
@@ -217,7 +219,7 @@ main {
       text-decoration: none; }
 
 #Pie {
-  height: 130px;
+  height: auto;
   background-color: #32502E;
   padding: 1%;
   background-image: url(../img/star.png);
@@ -279,18 +281,13 @@ img {
   align-items: center;
   justify-items: center;
   background-color: #ECE7B4; }
-  @media (min-width: 320px) {
+  @media (min-width: 0px) {
     .plat {
-      grid-template-areas: "nombrePlat"
- "vista "
- "ingredients "
- "procedure"; } }
+      grid-template-areas: "nombrePlat" "vista " "ingredients " "procedure"; } }
   @media (min-width: 992px) {
     .plat {
       grid-template-columns: 1fr 4fr;
-      grid-template-areas: "nombrePlat ingredients"
- "vista  ingredients "
- "procedure procedure"; } }
+      grid-template-areas: "nombrePlat ingredients" "vista  ingredients " "procedure procedure"; } }
 
 .nombrePlat {
   grid-area: nombrePlat;
@@ -308,12 +305,12 @@ img {
   color: black;
   text-align: justify;
   grid-area: procedure; }
-  .procedure ol, .ingredients ul {
+  .procedure ol, .ingredients ol, .ingredients ul {
     /**/
     margin-left: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
     @media (min-width: 768px) {
-      .procedure ol, .ingredients ul {
+      .procedure ol, .ingredients ol, .ingredients ul {
         column-count: 2;
         column-gap: 8%; } }
 
