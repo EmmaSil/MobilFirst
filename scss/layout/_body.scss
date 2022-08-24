@@ -49,4 +49,10 @@ header{
 }
 .logo{
     margin: 1%;
+    @include mediaQ(md){
+        margin:4%;
+    }
+    @include mediaQ(lg){
+       margin:initial;
+    }
  }

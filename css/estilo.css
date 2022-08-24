@@ -43,6 +43,12 @@ header {
 
 .logo {
   margin: 1%; }
+  @media (min-width: 768px) {
+    .logo {
+      margin: 4%; } }
+  @media (min-width: 992px) {
+    .logo {
+      margin: initial; } }
 
 .barra {
   grid-area: menu;
@@ -153,6 +159,8 @@ main {
       padding: 0%;
       margin: 3%;
       font-size: 1.5rem; } }
+  .contentR .card {
+    height: 550px; }
 
 /*Contenido del inicio*/
 .wrapR {
